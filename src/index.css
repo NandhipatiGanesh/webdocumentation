@@ -12,21 +12,21 @@ span {
 }
 @font-face {
   font-family: "Apercu";
-  src: url("./assets/fonts/apercu_regular_pro.otf") format("opentype");
+  src: url("/assets/fonts/apercu_regular_pro.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Apercu";
-  src: url("./assets/fonts/apercu_medium_pro.otf") format("opentype");
+  src: url("/assets/fonts/apercu_medium_pro.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Apercu";
-  src: url("./assets/fonts/apercu_bold_pro.otf") format("opentype");
+  src: url("/assets/fonts/apercu_bold_pro.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
