@@ -1,16 +1,29 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { Icon } from "@iconify/react";
+
 
 export const Sidebar = () => {
   const [opensidebar, setOpenedSidebar] = useState(false);
 
+
+
   const menuItems = [
     { icon: "lucide:layout-grid", label: "Dashboard", active: false },
-    { icon: "lucide:credit-card", label: "Payments", active: true },
-    { icon: "lucide:message-square", label: "Messages", active: false },
-    { icon: "lucide:mail", label: "Emails", active: false },
-    { icon: "lucide:bar-chart-2", label: "Reports", active: false },
-    { icon: "lucide:credit-card", label: "Billing", active: false },
+    { icon: "lucide:credit-card", label: "Components", active: true },
+    { icon: "lucide:message-square", label: "Templates", active: false },
+    { icon: "lucide:mail", label: "Emails", active: false, disabled: true },
+    {
+      icon: "lucide:bar-chart-2",
+      label: "Reports",
+      active: false,
+      disabled: true,
+    },
+    {
+      icon: "lucide:credit-card",
+      label: "Billing",
+      active: false,
+      disabled: true,
+    },
   ];
 
   return (
@@ -29,7 +42,7 @@ export const Sidebar = () => {
             />
           </div>
           {opensidebar && (
-            <span className="text-sm font-semibold">Insight</span>
+            <span className="text-sm font-semibold">Webcomponents</span>
           )}
         </div>
       </div>
@@ -39,10 +52,15 @@ export const Sidebar = () => {
         {menuItems.map((item, index) => (
           <button
             key={index}
-            className={`flex items-center gap-4 w-full rounded-xl p-4 transition-all  ${
-              item.active
-                ? "bg-neon-green text-black gap-4 "
-                : "text-white hover:bg-white/10 "
+            disabled={item.disabled}
+            className={`flex items-center gap-4 w-full rounded-xl p-4 transition-all
+
+            ${
+              item.disabled
+                ? "text-white opacity-50 cursor-not-allowed"
+                : item.active
+                ? "bg-neon-green text-black"
+                : "text-white hover:bg-white/10"
             }`}
           >
             <Icon icon={item.icon} className="h-6 w-6" />
