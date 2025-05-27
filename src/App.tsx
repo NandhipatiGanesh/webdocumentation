@@ -1,30 +1,39 @@
 import React, { useState } from "react";
-import { Icon } from "@iconify/react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Sidebar } from "./components/sidebar";
-import { MainContent } from "./components/main-content";
-import Header from './components/header';
+import Header from "./components/header";
+import Home from "./pages/Home";
+import Component from "./pages/Components";
+import Post from "./pages/Post";
 
 export default function App() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
   return (
-    <div className="flex h-screen bg-light-gray">
-      <div
-        className={`
+    <>
+      <BrowserRouter>
+        <div className="flex h-screen bg-light-gray">
+          <div
+            className={`
     fixed left-0 top-0 z-50 h-full  bg-sidebar-black
     transform transition-transform duration-300 ease-in-out
     ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
     md:static md:translate-x-0 md:flex
   `}
-      >
-        <Sidebar />
-      </div>
+          >
+            <Sidebar />
+          </div>
 
-      <div className="flex-1 flex flex-col overflow-hidden">
-        <Header />
-        
+          <div className="flex-1 flex flex-col overflow-hidden">
+            <Header />
 
-        <MainContent />
-      </div>
-    </div>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/component" element={<Component />} />
+              <Route path="/components/:slug" element={<Post />} />
+            </Routes>
+          </div>
+        </div>
+      </BrowserRouter>
+    </>
   );
 }
