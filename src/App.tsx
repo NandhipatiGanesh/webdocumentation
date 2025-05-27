@@ -87,12 +87,12 @@ export default function App() {
                     />
                     <span className="absolute right-0 top-0 h-3 w-3 rounded-full bg-neon-green ring-2 ring-white"></span>
                   </div>
-                  <div className="text-sm">
+{/*                   <div className="text-sm">
                     <p className="font-medium">William Blake</p>
                     <div className="flex items-center text-xs text-default-500">
                       <span className="text-neon-green font-medium">PRO</span>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
