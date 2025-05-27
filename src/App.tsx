@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import { Sidebar } from "./components/sidebar";
 import { MainContent } from "./components/main-content";
+import Header from "./components/header";
 
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -19,18 +20,19 @@ export default function App() {
       </div>
 
       <div className="flex-1 flex flex-col overflow-hidden">
-        <header className="border-b-0 bg-white px-4 py-4">
+        <Header />
+        {/* <header className="border-b-0 bg-white px-4 py-4">
           <div className="flex w-full items-center justify-between">
-            {/* Page Title */}
+          
             <h1 className="text-2xl font-bold">Overview</h1>
 
-            {/* Hamburger Button (Mobile Only) */}
+           
             <button
               onClick={() => setSidebarOpen((prev) => !prev)}
               className="md:hidden p-2"
               aria-label="Open Menu"
             >
-              {/* Your SVG or Icon here */}
+            
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <line
                   x1="4"
@@ -51,9 +53,9 @@ export default function App() {
               </svg>
             </button>
 
-            {/* Right Side Actions (Hidden on Mobile) */}
+         
             <div className="hidden md:flex items-center gap-4">
-              {/* Search Input */}
+       
               <div className="max-w-[300px]">
                 <div className="flex items-center rounded-md bg-light-gray px-3 py-2">
                   <Icon
@@ -68,7 +70,7 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Icon Buttons and Profile */}
+           
               <div className="flex items-center gap-4">
                 <button className="rounded-full p-2 hover:bg-light-gray">
                   <Icon icon="lucide:hexagon" className="h-6 w-6" />
@@ -77,7 +79,7 @@ export default function App() {
                   <Icon icon="lucide:bell" className="h-6 w-6" />
                 </button>
 
-                {/* Profile Section */}
+          
                 <div className="flex items-center gap-2">
                   <div className="relative">
                     <img
@@ -97,7 +99,7 @@ export default function App() {
               </div>
             </div>
           </div>
-        </header>
+        </header> */}
 
         <MainContent />
       </div>
