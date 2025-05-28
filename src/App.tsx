@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Sidebar } from "./components/sidebar";
 import Header from "./components/header";
@@ -23,7 +23,7 @@ export default function App() {
             <Sidebar />
           </div>
 
-          <div className="flex-1 flex flex-col overflow-hidden">
+          <div className="flex-1 flex flex-col overflow-auto">
             <Header />
 
             <Routes>

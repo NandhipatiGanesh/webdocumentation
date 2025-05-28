@@ -38,20 +38,7 @@ export default function Header() {
 
           {/* Right Side Actions (Hidden on Mobile) */}
           <div className="hidden md:flex items-center gap-4">
-            {/* Search Input */}
-            <div className="max-w-[300px]">
-              <div className="flex items-center rounded-md bg-light-gray px-3 py-2">
-                <Icon
-                  icon="lucide:search"
-                  className="text-default-400 mr-2 h-5 w-5"
-                />
-                <input
-                  type="text"
-                  placeholder="Search"
-                  className="w-full bg-transparent text-sm outline-none"
-                />
-              </div>
-            </div>
+          
 
             {/* Icon Buttons and Profile */}
             <div className="flex items-center gap-4">
