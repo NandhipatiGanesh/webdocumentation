@@ -1,9 +1,7 @@
-
-
 const PricingCard = () => {
   return (
-    <div className="w-full h-full">
-      <div className="space-y-5 px-8 py-12">
+    <div className="w-full h-fit">
+      <div className="space-y-5 px-6 py-12">
         <div className="container flex space-x-2">
           <div className="no-scrollbar overflow-hidden">
             <div className="flex no-scrollbar justify-start space-x-6 items-center overflow-x-auto">
@@ -20,7 +18,7 @@ const PricingCard = () => {
           </button>
         </div>
         <div className="demo-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <div className="rounded-[30px] md:rounded-[36px] bg-[#FAFAFA] overflow-hidden border-[1px] border-gray-200 p-8 relative">
+          <div className="rounded-[30px] md:rounded-[36px] bg-[#FFF] overflow-hidden border-[1px] border-gray-200 p-8 relative">
             <div className="h-full">
               <div className="h-full z-10 relative">
                 <div className="flex flex-col flex-1 justify-between h-full space-y-5">
@@ -179,7 +177,7 @@ const PricingCard = () => {
               </div>
             </div>
           </div>
-          <div className="rounded-[30px] md:rounded-[36px] bg-[#FAFAFA] overflow-hidden border-[1px] border-gray-200 p-8 relative">
+          <div className="rounded-[30px] md:rounded-[36px] bg-[#FFF] overflow-hidden border-[1px] border-gray-200 p-8 relative">
             <div className="h-full">
               <div className="h-full z-10 relative">
                 <div className="flex flex-col flex-1 justify-between h-full space-y-5">
@@ -369,7 +367,7 @@ const PricingCard = () => {
               </div>
             </div>
           </div>
-          <div className="rounded-[30px] md:rounded-[36px] bg-[#FAFAFA] overflow-hidden border-[1px] border-gray-200 p-8 relative">
+          <div className="rounded-[30px] md:rounded-[36px] bg-[#FFF] overflow-hidden border-[1px] border-gray-200 p-8 relative">
             <div className="h-full">
               <div className="h-full z-10 relative">
                 <div className="flex flex-col flex-1 justify-between h-full space-y-5">
@@ -528,7 +526,7 @@ const PricingCard = () => {
               </div>
             </div>
           </div>
-          <div className="rounded-[30px] md:rounded-[36px] bg-[#FAFAFA] overflow-hidden border-[1px] border-gray-200 p-8 relative lg:col-span-2">
+          <div className="rounded-[30px] md:rounded-[36px] bg-[#FFF] overflow-hidden border-[1px] border-gray-200 p-8 relative lg:col-span-2">
             <div className="h-full">
               <div className="h-full z-10 relative lg:flex lg:justify-between lg:w-full lg:pr-8 lg:items-center">
                 <div className="flex flex-col flex-1 justify-between h-full space-y-5">
@@ -721,7 +719,7 @@ const PricingCard = () => {
               </div>
             </div>
           </div>
-          <div className="rounded-[30px] md:rounded-[36px] bg-[#FAFAFA] overflow-hidden border-[1px] border-gray-200 p-8 relative sm:col-span-2 lg:col-span-1">
+          <div className="rounded-[30px] md:rounded-[36px] bg-[#FFF] overflow-hidden border-[1px] border-gray-200 p-8 relative sm:col-span-2 lg:col-span-1">
             <div className="h-full">
               <div className="flex flex-col justify-between h-full space-y-5">
                 <div className="flex justify-between flex-col">

@@ -24,7 +24,7 @@ export default function App() {
           </div>
 
           <div className="flex-1 flex flex-col overflow-auto">
-            <Header />
+            <Header setSidebarOpen={setSidebarOpen} />
 
             <Routes>
               <Route path="/" element={<Home />} />
