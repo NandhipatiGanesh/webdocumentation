@@ -22,21 +22,26 @@
       data-type="lazy"
     ></script> -->
     <script>
-      window.addEventListener("load", () => {
-        setTimeout(() => {
-          const chatScript = document.createElement("script");
-          chatScript.src =
-            "https://cdn.jsdelivr.net/npm/heroui-chat-script@0/dist/index.min.js";
-          chatScript.async = true;
-          document.body.appendChild(chatScript);
+      const loadChat = () => {
+        const chatScript = document.createElement("script");
+        chatScript.src =
+          "https://cdn.jsdelivr.net/npm/heroui-chat-script@0/dist/index.min.js";
+        chatScript.async = true;
+        document.body.appendChild(chatScript);
 
-          const utilsScript = document.createElement("script");
-          utilsScript.src =
-            "https://cdn.jsdelivr.net/npm/heroui-chat-script@beta/dist/select-and-edit-utils.global.js";
-          utilsScript.async = true;
-          document.body.appendChild(utilsScript);
-        }, 500); // 500ms delay is good for perceived performance
-      });
+        const utilsScript = document.createElement("script");
+        utilsScript.src =
+          "https://cdn.jsdelivr.net/npm/heroui-chat-script@beta/dist/select-and-edit-utils.global.js";
+        utilsScript.async = true;
+        document.body.appendChild(utilsScript);
+
+        // Remove listeners after loading
+        window.removeEventListener("scroll", loadChat);
+        window.removeEventListener("mousemove", loadChat);
+      };
+
+      window.addEventListener("scroll", loadChat);
+      window.addEventListener("mousemove", loadChat);
     </script>
   </body>
 </html>
