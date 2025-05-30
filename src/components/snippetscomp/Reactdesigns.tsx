@@ -24,9 +24,14 @@ export default function ReactComponents() {
     fetchPosts();
   }, []);
   useEffect(() => {
-    window.addEventListener("load", () => {
-      setPageLoaded(true);
-    });
+    const handleLoad = () => setPageLoaded(true);
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
   }, []);
 
   return (
@@ -65,7 +70,7 @@ export default function ReactComponents() {
                   }}
                 ></div> */}
                 <div
-                  className="card__image md:h-[200px] lg:h-[250px]"
+                  className="card__image"
                   style={
                     pageLoaded
                       ? {
