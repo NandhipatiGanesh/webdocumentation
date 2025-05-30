@@ -35,7 +35,8 @@ export default function ReactComponents() {
         ) : (
           postdata.map((item, index) => (
             <a
-              href={item.custom_fields._template_link?.[0]}
+              // href={item.custom_fields._template_link?.[0]}
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               key={index}
@@ -50,23 +51,43 @@ export default function ReactComponents() {
                 )}
 
                 {/* Image Background */}
-                <div
-                  className="card__image md:h-[200px] lg:h-[250px]"
-                  style={
-                    {
-                      "--bg-color": "#a78bfa",
-                      backgroundImage: `url(${item.featured_image})`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                    } as React.CSSProperties
-                  }
-                ></div>
+                <a
+                  href={item.custom_fields._template_link?.[0]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    className="card__image md:h-[200px] lg:h-[250px]"
+                    style={
+                      {
+                        "--bg-color": "#a78bfa",
+                        backgroundImage: `url(${item.featured_image})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                      } as React.CSSProperties
+                    }
+                  ></div>
+                </a>
 
                 {/* Text */}
                 <div className="card__text">
-                  <p className="card__title">{item.title}</p>
+                  <a
+                    href={item.custom_fields._template_link?.[0]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <p className="card__title">{item.title}</p>
+                  </a>
+
                   {/* <p className="card__description">{item.excerpt}</p> */}
-                  <p>Preview</p>
+                  <a
+                    href={item.custom_fields._template_preview?.[0]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="card__description"
+                  >
+                    Preview{" "}
+                  </a>
                 </div>
 
                 {/* Footer */}
@@ -76,7 +97,9 @@ export default function ReactComponents() {
                   
                 </div> */}
                   <div className="card__price text-neon-green">
-                    {`₹${item.custom_fields._template_price?.[0] ?? "free"}`}
+                    {item.custom_fields._template_paid?.[0] === "paid"
+                      ? `₹${item.custom_fields._template_price?.[0] ?? "0"}`
+                      : "Free"}
                   </div>
 
                   <div className="card__button">
