@@ -13,7 +13,30 @@
   <body class="h-full min-h-screen">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script src="https://cdn.jsdelivr.net/npm/heroui-chat-script@0/dist/index.min.js"  data-type='lazy'></script>
-    <script src="https://cdn.jsdelivr.net/npm/heroui-chat-script@beta/dist/select-and-edit-utils.global.js"  data-type='lazy'></script>
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/heroui-chat-script@0/dist/index.min.js"
+      data-type="lazy"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/heroui-chat-script@beta/dist/select-and-edit-utils.global.js"
+      data-type="lazy"
+    ></script> -->
+    <script>
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          const chatScript = document.createElement("script");
+          chatScript.src =
+            "https://cdn.jsdelivr.net/npm/heroui-chat-script@0/dist/index.min.js";
+          chatScript.async = true;
+          document.body.appendChild(chatScript);
+
+          const utilsScript = document.createElement("script");
+          utilsScript.src =
+            "https://cdn.jsdelivr.net/npm/heroui-chat-script@beta/dist/select-and-edit-utils.global.js";
+          utilsScript.async = true;
+          document.body.appendChild(utilsScript);
+        }, 500); // 500ms delay is good for perceived performance
+      });
+    </script>
   </body>
 </html>
