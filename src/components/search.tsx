@@ -13,7 +13,7 @@ const ResponsiveSearchBar = () => {
         <h2
           className="text-center text-2xl font-bold text-black dark:text-white md:text-4xl"
           style={{
-            lineHeight: "1.2",
+            lineHeight: "1.4",
             marginBottom: "1rem",
           }}
         >
@@ -21,7 +21,7 @@ const ResponsiveSearchBar = () => {
         </h2>
 
         <label
-          className="mx-auto w-[90%] md:w-[85%] relative bg-white  flex flex-col md:flex-row items-center justify-center border py-2 px-2 md:rounded-1xl rounded-3xl gap-2 shadow-2xl focus-within:border-gray-300"
+          className="mx-auto w-[90%] md:w-[45%] relative bg-white  flex flex-col md:flex-row items-center justify-center border py-2 px-2 md:rounded-1xl rounded-3xl gap-2 shadow-2xl focus-within:border-gray-300"
           htmlFor="search-bar"
         >
           <input
@@ -62,7 +62,7 @@ const ResponsiveSearchBar = () => {
             </div>
           </button>
         </label>
-        <div className="flex justify-center items-center flex-col md:flex-row mt-4">
+        <div className="flex justify-center items-center gap-2  flex-col  mt-4">
           {loading ? (
             // Skeleton Loader
             <div className="flex space-x-2">
