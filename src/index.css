@@ -358,3 +358,9 @@ span,
     }
   }
 }
+
+@media (max-width: 475px) {
+  .card {
+    padding: 12px;
+  }
+}
