@@ -1,17 +1,24 @@
-import ReactComponents from "../components/snippetscomp/Reactdesigns";
-import PricingCard from "../components/pricingcard/price";
-import Review from "../components/Review";
+import React, { Suspense, lazy } from "react";
 import ResponsiveSearchBar from "../components/search";
-import Faqs from "../components/faq/faq";
+
+// Lazy load the other components
+const ReactComponents = lazy(
+  () => import("../components/snippetscomp/Reactdesigns")
+);
+const Review = lazy(() => import("../components/Review"));
+const PricingCard = lazy(() => import("../components/pricingcard/price"));
+const Faqs = lazy(() => import("../components/faq/faq"));
 
 export default function Home() {
   return (
     <>
       <ResponsiveSearchBar />
-      <ReactComponents />
-      <Review />
-      <PricingCard />
-      <Faqs />
+      <Suspense fallback={<div>Loading...</div>}>
+        <ReactComponents />
+        <Review />
+        <PricingCard />
+        <Faqs />
+      </Suspense>
     </>
   );
 }
