@@ -69,18 +69,20 @@ export default function ReactComponents() {
                     backgroundPosition: "center",
                   }}
                 ></div> */}
-                <div
-                  className="card__image"
-                  style={
-                    pageLoaded
-                      ? {
-                          backgroundImage: `url(${item.featured_image})`,
-                          backgroundSize: "cover",
-                          backgroundPosition: "center",
-                        }
-                      : {}
-                  }
-                />
+              <div className="card__image">
+  {pageLoaded && (
+    <img
+      src={item.featured_image}
+      alt="Card preview"
+      style={{
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+      }}
+    />
+  )}
+</div>
+
 
                 {/* Text Content */}
                 <div className="card__text">
