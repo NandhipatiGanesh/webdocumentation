@@ -1,6 +1,13 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, FC } from "react";
 import axios from "axios";
 import SpinnerDemo from "../spinner-01";
+
+type ButtonsEvents = {
+  labelOne: string;
+  labelTwo: string;
+  onClickOne?: () => void;
+  onClickTwo?: () => void;
+};
 
 export default function ReactComponents() {
   const [postdata, setPostData] = useState<any[]>([]);
@@ -43,7 +50,7 @@ export default function ReactComponents() {
       {loading ? (
         <SpinnerDemo />
       ) : (
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-8">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
           {postdata.map((item, index) => (
             <a
               key={index}
@@ -69,51 +76,49 @@ export default function ReactComponents() {
                     backgroundPosition: "center",
                   }}
                 ></div> */}
-              <div className="card__image">
-  {pageLoaded && (
-    <img
-      src={item.featured_image}
-      alt="Card preview"
-      style={{
-        width: '100%',
-        height: '100%',
-        objectFit: 'contain',
-      }}
-    />
-  )}
-</div>
-
+                <div className="card__image">
+                  {pageLoaded && (
+                    <img
+                      src={item.featured_image}
+                      alt="Card preview"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "contain",
+                      }}
+                    />
+                  )}
+                </div>
 
                 {/* Text Content */}
                 <div className="card__text">
                   <p className="card__title">{item.title}</p>
-                  <a
+                  {/* <a
                     href={item.custom_fields._template_preview?.[0]}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="card__description"
                   >
                     Preview
-                  </a>
+                  </a> */}
                 </div>
 
                 {/* Footer */}
-                <div className="card__footer bg-black rounded-full">
-                  <div className="card__price text-neon-green">
-                    {item.custom_fields._template_paid?.[0] === "paid"
-                      ? `₹${item.custom_fields._template_price?.[0] ?? "0"}`
-                      : "Free"}
-                  </div>
-                  <div className="card__button">
-                    <svg height="16" width="16" viewBox="0 0 24 24">
-                      <path
-                        strokeWidth="2"
-                        stroke="currentColor"
-                        d="M4 12H20M12 4V20"
-                        fill="currentColor"
-                      ></path>
-                    </svg>
-                  </div>
+                <div className="card__footer">
+                  <ActionButtons
+                    labelOne={
+                      item.custom_fields._template_paid?.[0] === "paid"
+                        ? `₹${item.custom_fields._template_price?.[0] ?? "0"}`
+                        : "Free"
+                    }
+                    labelTwo="Preview"
+                    onClickTwo={() =>
+                      window.open(
+                        item.custom_fields._template_preview?.[0],
+                        "_blank"
+                      )
+                    }
+                  />
                 </div>
               </div>
             </a>
@@ -123,3 +128,29 @@ export default function ReactComponents() {
     </section>
   );
 }
+const ActionButtons: React.FC<ButtonsEvents> = ({
+  labelOne,
+  labelTwo,
+  onClickOne,
+  onClickTwo,
+}) => {
+  return (
+    <div className="flex gap-2 w-full">
+      <button
+        type="button"
+        onClick={onClickOne}
+        className="py-4 px-5 text-sm w-full font-medium rounded-2xl border border-transparent bg-[#000] text-white hover:bg-blue-700"
+      >
+        {labelOne}
+      </button>
+
+      <button
+        type="button"
+        onClick={onClickTwo}
+        className="py-4 px-5 w-full text-sm font-medium rounded-2xl border border-gray-200 bg-white text-gray-800 hover:bg-gray-50"
+      >
+        {labelTwo}
+      </button>
+    </div>
+  );
+};

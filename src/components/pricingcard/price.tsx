@@ -2,6 +2,11 @@ const PricingCard = () => {
   return (
     <div className="w-full h-fit">
       <div className="space-y-5 px-6 py-12">
+        <div className="mb-10 space-y-4 px-6 md:px-0">
+          <h2 className="text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
+            Our Pricing.
+          </h2>
+        </div>
         <div className="container flex space-x-2">
           <div className="no-scrollbar overflow-hidden">
             <div className="flex no-scrollbar justify-start space-x-6 items-center overflow-x-auto">
@@ -70,7 +75,7 @@ const PricingCard = () => {
                               strokeLinejoin="round"
                             ></path>
                           </svg>
-                          <span>5,000 events / month</span>
+                          <span>Pro Components</span>
                         </li>
                         <li className="flex items-center font-medium space-x-2 text-black">
                           <svg
@@ -87,7 +92,7 @@ const PricingCard = () => {
                               strokeLinejoin="round"
                             ></path>
                           </svg>
-                          <span>Unlimited seats</span>
+                          <span> 1 Landing Page</span>
                         </li>
                       </ul>
                     </div>
@@ -260,7 +265,7 @@ const PricingCard = () => {
                               strokeLinejoin="round"
                             ></path>
                           </svg>
-                          <span>20,000 events / month</span>
+                          <span>Components & Pages</span>
                         </li>
                         <li className="flex items-center font-medium space-x-2 text-black">
                           <svg
@@ -277,7 +282,7 @@ const PricingCard = () => {
                               strokeLinejoin="round"
                             ></path>
                           </svg>
-                          <span>Unlimited seats</span>
+                          <span>Unlimited downloads</span>
                         </li>
                       </ul>
                     </div>
@@ -419,7 +424,7 @@ const PricingCard = () => {
                               strokeLinejoin="round"
                             ></path>
                           </svg>
-                          <span>80,000 events / mo</span>
+                          <span>All in Webcomponents</span>
                         </li>
                         <li className="flex items-center font-medium space-x-2 text-black">
                           <svg
@@ -436,7 +441,7 @@ const PricingCard = () => {
                               strokeLinejoin="round"
                             ></path>
                           </svg>
-                          <span>Unlimited seats</span>
+                          <span>Custom Templates(2)</span>
                         </li>
                       </ul>
                     </div>
@@ -595,7 +600,7 @@ const PricingCard = () => {
                               strokeLinejoin="round"
                             ></path>
                           </svg>
-                          <span>3 seats</span>
+                          <span>1 Premium Component</span>
                         </li>
                         <li className="flex items-center font-medium space-x-2 text-gray-600">
                           <svg
@@ -612,7 +617,7 @@ const PricingCard = () => {
                               strokeLinejoin="round"
                             ></path>
                           </svg>
-                          <span>200 events / month</span>
+                          <span>Free Tagged Components</span>
                         </li>
                       </ul>
                     </div>
@@ -712,7 +717,7 @@ const PricingCard = () => {
                           strokeLinejoin="round"
                         ></path>
                       </svg>
-                      <span>200 events / month</span>
+                      <span>Free Pages</span>
                     </li>
                   </ul>
                 </div>

@@ -29,13 +29,9 @@ const Review = () => {
               </div>
             </div>
             <p className="mt-8">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              aliquid quo eum quae quos illo earum ipsa doloribus nostrum minus
-              libero aspernatur laborum cum, a suscipit, ratione ea totam ullam!
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Architecto laboriosam deleniti aperiam ab veniam sint non cumque
-              quis tempore cupiditate. Sint libero voluptas veniam at
-              reprehenderit, veritatis harum et rerum.
+              This platform has saved me countless hours of development. The
+              components are easy to use, customizable, and look amazing. I
+              can't recommend it enough!
             </p>
           </div>
 
@@ -59,10 +55,8 @@ const Review = () => {
               </div>
             </div>
             <p className="mt-8">
-              {" "}
-              Lorem ipsum dolor laboriosam deleniti aperiam ab veniam sint non
-              cumque quis tempore cupiditate. Sint libero voluptas veniam at
-              reprehenderit, veritatis harum et rerum.
+              We were able to redesign our landing page in just a day using
+              these templates. It boosted our conversions by 35%. Just wow!
             </p>
           </div>
 
@@ -86,10 +80,9 @@ const Review = () => {
               </div>
             </div>
             <p className="mt-8">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Architecto laboriosam deleniti aperiam ab veniam sint non cumque
-              quis tempore cupiditate. Sint libero voluptas veniam at
-              reprehenderit, veritatis harum et rerum.
+              As a developer, I appreciate how clean and well-structured these
+              components are. They help me focus more on logic and less on
+              styling.
             </p>
           </div>
 
@@ -113,10 +106,8 @@ const Review = () => {
               </div>
             </div>
             <p className="mt-8">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Architecto laboriosam deleniti aperiam ab veniam sint non cumque
-              quis tempore cupiditate. Sint libero voluptas veniam at
-              reprehenderit, veritatis harum et rerum.
+              These components are a game-changer. Integration is seamless and
+              the responsiveness is perfect across all devices.
             </p>
           </div>
 
@@ -140,11 +131,8 @@ const Review = () => {
               </div>
             </div>
             <p className="mt-8">
-              {" "}
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Architecto laboriosam deleniti aperiam ab veniam sint non cumque
-              quis tempore cupiditate. Sint libero voluptas veniam at
-              reprehenderit, veritatis harum et rerum.
+              I manage a team of designers and devs. This site has become our
+              go-to resource for UI inspiration and building blocks.
             </p>
           </div>
 
@@ -168,10 +156,8 @@ const Review = () => {
               </div>
             </div>
             <p className="mt-8">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Architecto laboriosam deleniti aperiam ab veniam sint non cumque
-              quis tempore cupiditate. Sint libero voluptas veniam at
-              reprehenderit, veritatis harum et rerum.
+              Beautiful, accessible, and performance-friendly components. These
+              are exactly what I need for fast MVP development.
             </p>
           </div>
         </div>
