@@ -88,6 +88,10 @@ export default function ReactComponents() {
       label: "Dashboards",
       apiCall: `${apiUrl}?category=dashboards`,
     },
+    {
+      label: "Pricing",
+      apiCall: `${apiUrl}?category=pricing`,
+    },
     // Add more as needed
   ];
 
