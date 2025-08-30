@@ -9,7 +9,7 @@ type HeaderProps = {
 export default function Header({ setSidebarOpen }: HeaderProps) {
   const [sidebarOpen, setSidebarOpenState] = useState<boolean>(false);
   return (
-    <header className="border-b-0 bg-white px-4 py-4">
+    <header className="border-b-0  px-4 py-4">
       <div className="flex w-full items-center justify-between">
         <h1 className="text-2xl font-bold">Webcomponents</h1>
 
