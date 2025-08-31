@@ -1,7 +1,7 @@
 // src/pages/docs/Installation.tsx
 export default function Installation() {
   return (
-    <div className="prose max-w-3xl mx-auto p-6">
+    <div className="prose max-w-3xl w-full mx-auto p-6">
       <h1 className="text-3xl font-bold">Installation</h1>
       <p className="mt-4">
         This guide walks you through the installation process for the library.
@@ -37,7 +37,7 @@ export default function Installation() {
         The easiest way to add the package to your project is by using npm.
         Navigate to your project root and run:
       </p>
-      <pre className="bg-gray-800 text-white p-4 rounded">
+      <pre className="bg-gray-800 text-white p-4 rounded w-full overflow-scroll">
         {`npm install your-library-name`}
       </pre>
       <p>
@@ -52,7 +52,7 @@ export default function Installation() {
         If you prefer Yarn as your package manager, simply run the following
         command:
       </p>
-      <pre className="bg-gray-800 text-white p-4 rounded">
+      <pre className="bg-gray-800 text-white p-4 rounded w-full overflow-scroll">
         {`yarn add your-library-name`}
       </pre>
       <p>
@@ -66,7 +66,7 @@ export default function Installation() {
         Once installed, you can quickly verify that everything is working by
         importing a simple component from the library. For example:
       </p>
-      <pre className="bg-gray-800 text-white p-4 rounded">
+      <pre className="bg-gray-800 text-white p-4 rounded w-full overflow-scroll">
         {`import { Button } from "your-library-name";
 
 export default function Verify() {
@@ -104,7 +104,7 @@ export default function Verify() {
         In some cases, you may want to install directly from GitHub instead of
         npm. This is useful when testing unreleased features or custom forks.
       </p>
-      <pre className="bg-gray-800 text-white p-4 rounded">
+      <pre className="bg-gray-800 text-white p-4 rounded w-full overflow-scroll">
         {`npm install username/repository-name
 
 # or with yarn

@@ -1,7 +1,7 @@
 // src/pages/docs/GettingStarted.tsx
 export default function GettingStarted() {
   return (
-    <div className="prose max-w-3xl mx-auto p-6">
+    <div className="prose max-w-3xl w-full mx-auto p-6">
       <h1 className="text-3xl font-bold">Getting Started</h1>
       <p className="mt-4">
         Welcome to the documentation! This guide will walk you through the
@@ -34,7 +34,7 @@ export default function GettingStarted() {
         manager. The library is distributed via npm and works seamlessly with
         both npm and yarn.
       </p>
-      <pre className="bg-gray-800 text-white p-4 rounded">
+      <pre className="bg-gray-800 text-white p-4 rounded w-full overflow-scroll">
         {`npm install your-library-name
 
 # or using yarn
@@ -54,7 +54,7 @@ yarn add your-library-name`}
         the library within your app entry point. For example, in a React
         project, you might initialize the provider at the root level.
       </p>
-      <pre className="bg-gray-800 text-white p-4 rounded">
+      <pre className="bg-gray-800 text-white p-4 rounded w-full overflow-scroll">
         {`import { Provider } from "your-library-name";
 
 function App() {
@@ -79,7 +79,7 @@ export default App;`}
         Let’s look at a basic example. Suppose you want to add a styled button
         component. Simply import it and use it in your JSX:
       </p>
-      <pre className="bg-gray-800 text-white p-4 rounded">
+      <pre className="bg-gray-800 text-white p-4 rounded w-full overflow-scroll">
         {`import { Button } from "your-library-name";
 
 export default function Example() {
@@ -101,7 +101,7 @@ export default function Example() {
         allows you to modify themes, colors, typography, breakpoints, and other
         design tokens.
       </p>
-      <pre className="bg-gray-800 text-white p-4 rounded">
+      <pre className="bg-gray-800 text-white p-4 rounded w-full overflow-scroll">
         {`// config.js
 export default {
   theme: {

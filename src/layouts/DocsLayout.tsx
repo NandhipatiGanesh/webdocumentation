@@ -87,7 +87,7 @@ export default function DocsLayout() {
 
            {/* Main Content */}
            <main className="flex-1 md:p-6 lg:p-6 p-0 overflow-y-auto">
-             <div className="rounded-2xl max-w-[80%] mx-auto py-8 flex justify-center">
+             <div className="rounded-2xl md:max-w-[80%] max-w-[100%] w-full mx-auto py-8 flex justify-center">
                <Outlet />
              </div>
          
@@ -95,8 +95,16 @@ export default function DocsLayout() {
            </main>
 
           {/* Right Sidebar */}
-          <aside className="w-64 hidden md:flex lg:flex flex-col border-l border-gray-200 p-4">
+          <aside className="w-64 hidden md:flex lg:flex flex-col border-l border-gray-200 bg-[f6f7f8] p-4">
             <h2 className="font-bold">On This Page</h2>
+            <div className="border-l-2 border-gray-200  flex-col flex justify-start mt-4">
+              <ul className="space-y-4 pl-4">
+                <li className="text-lg font-medium cursor-pointer">Introduction</li>
+                <li className="text-lg font-medium cursor-pointer">How to install</li>
+                <li className="text-lg font-medium cursor-pointer">Dependencies</li>
+                <li className="text-lg font-medium cursor-pointer">Final thoughts</li>
+              </ul>
+            </div>
           </aside>
         </div>
         
